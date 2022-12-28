@@ -1,0 +1,81 @@
+<html lang="en">
+
+<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyDIf7KnM9yc4sOzKvb9gr_AF9LxtrtSuVs",
+    authDomain: "budjetitnew.firebaseapp.com",
+    databaseURL: "https://budjetitnew.firebaseio.com",
+    projectId: "budjetitnew",
+    storageBucket: "budjetitnew.appspot.com",
+    messagingSenderId: "3172549884",
+    appId: "1:3172549884:web:ace42db237e84edade0379",
+    measurementId: "G-70Z4ZGEZPV"
+  };
+  // Initialize Firebase
+  
+  firebase.initializeApp(firebaseConfig);
+  var dbref=firebase.database().ref().child('text');
+  dbref.on('value', snap => console.log(snap.val()));
+  
+  //firebase.analytics();
+  
+</script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<head>
+
+  <title>Budget it!</title>
+  <!--navbar-->
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+<body>
+  <img src="cover.png" style="width: 100%; height: 170px;" > <!--cover-->
+  
+<!--navbar-->
+   <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" style="cursor: pointer;">Contact Us</a>
+      </div>
+	  <div id="main"></div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a style="cursor: pointer;" onclick="personal_ar_func()" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="Personal_Area"> Select To start <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a onclick="login_function();" style="cursor: pointer;">log in</a></li>
+            <li><a onclick="signin_function();" style="cursor: pointer;">sign up</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  
+        <img id="img1" src="Audi (2).jpg" style="width: 50%; height: 50%;" >  
+        <img id="img2" src="Ameer.jpeg" style="width: 50%; height: 50%;" >
+      
+
+    
+   <p id="output"></p>
+  </nav>
+<!--end navbar-->
+
+<!--footer-->
+<div>
+  <br>
+</div>
+  <div class="jumbotron text-center" style="margin-bottom:0; height: 2px;">
+    <p>©AMEER NASSAR</p>
+</div>
+
+<!--end footer-->
+</body>
+</html>
